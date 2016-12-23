@@ -3,7 +3,7 @@
 Persistent data structure representing an ordered mapping from strings
 to values, with some convenient update methods.
 
-This is not an efficient data structure or large maps, just a minimal
+This is not an efficient data structure for large maps, just a minimal
 helper for cleanly creating and managing small maps in a way that
 makes their key order explicit and easy to think about.
 

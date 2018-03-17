@@ -126,4 +126,4 @@ OrderedMap.from = function(value) {
   return new OrderedMap(content)
 }
 
-module.exports = OrderedMap
+exports.OrderedMap = OrderedMap

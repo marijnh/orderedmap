@@ -17,6 +17,14 @@ declare class OrderedMap<T = any> {
 
   forEach(fn: (key: string, value: T) => any): void
 
+  prepend<U extends MapLike>(
+    map: U
+  ): U extends MapLike<infer A> ? OrderedMap<T | A> : never
+
+  append<U extends MapLike>(
+    map: U
+  ): U extends MapLike<infer A> ? OrderedMap<T | A> : never
+
   subtract<U extends Record<string, any> | OrderedMap>(map: U): OrderedMap<T>
 
   get size(): number

@@ -21,13 +21,11 @@ declare class OrderedMap<T = any> {
 
   get size(): number
 
-  static from<U extends Record<string, any> | OrderedMap>(
+  static from<U extends MapLike>(
     value: U
-  ): U extends Record<string, infer T>
-    ? OrderedMap<T>
-    : U extends OrderedMap<infer T>
-    ? OrderedMap<T>
-    : never
+  ): U extends MapLike<infer T> ? OrderedMap<T> : never
 }
+
+type MapLike<T = any> = Record<string, T> | OrderedMap<T>
 
 export default OrderedMap

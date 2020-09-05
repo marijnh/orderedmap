@@ -1,8 +1,6 @@
 declare class OrderedMap<T = any> {
   constructor(content: T[])
 
-  find(key: string): number
-
   get(key: string): T
 
   update(key: string, value: T, newKey?: string): OrderedMap<T>
@@ -17,21 +15,15 @@ declare class OrderedMap<T = any> {
 
   forEach(fn: (key: string, value: T) => any): void
 
-  prepend<U extends MapLike>(
-    map: U
-  ): U extends MapLike<infer A> ? OrderedMap<T | A> : never
+  prepend(map: MapLike<T>): OrderedMap<T>
 
-  append<U extends MapLike>(
-    map: U
-  ): U extends MapLike<infer A> ? OrderedMap<T | A> : never
+  append(map: MapLike<T>): OrderedMap<T>
 
-  subtract<U extends Record<string, any> | OrderedMap>(map: U): OrderedMap<T>
+  subtract(map: MapLike<T>): OrderedMap<T>
 
   get size(): number
 
-  static from<U extends MapLike>(
-    value: U
-  ): U extends MapLike<infer T> ? OrderedMap<T> : never
+  static from<T>(map: MapLike<T>): OrderedMap<T>
 }
 
 type MapLike<T = any> = Record<string, T> | OrderedMap<T>

@@ -1,7 +1,7 @@
 declare class OrderedMap<T = any> {
-  constructor(content: T[])
+  constructor(content: Array<string | T>)
 
-  get(key: string): T
+  get(key: string): T | undefined
 
   update(key: string, value: T, newKey?: string): OrderedMap<T>
 

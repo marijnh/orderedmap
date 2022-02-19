@@ -4,11 +4,6 @@
   "description": "Persistent ordered mapping from strings",
   "main": "index.js",
   "module": "index.es.js",
-  "types": "types/index.d.ts",
-  "files": [
-    "types",
-    "index.es.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marijnh/orderedmap.git"

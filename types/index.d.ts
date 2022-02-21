@@ -1,5 +1,5 @@
 declare class OrderedMap<T = any> {
-  constructor(content: Array<string | T>)
+  private constructor(content: Array<string | T>)
 
   get(key: string): T | undefined
 

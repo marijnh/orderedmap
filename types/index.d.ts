@@ -1,7 +1,7 @@
 declare class OrderedMap<T = any> {
-  constructor(content: T[])
+  private constructor(content: Array<string | T>)
 
-  get(key: string): T
+  get(key: string): T | undefined
 
   update(key: string, value: T, newKey?: string): OrderedMap<T>
 
@@ -28,4 +28,4 @@ declare class OrderedMap<T = any> {
 
 type MapLike<T = any> = Record<string, T> | OrderedMap<T>
 
-export default OrderedMap
+export = OrderedMap

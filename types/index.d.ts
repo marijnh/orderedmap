@@ -28,4 +28,4 @@ declare class OrderedMap<T = any> {
 
 type MapLike<T = any> = Record<string, T> | OrderedMap<T>
 
-export = OrderedMap
+export default OrderedMap

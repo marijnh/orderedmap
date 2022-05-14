@@ -1,5 +1,6 @@
 /node_modules
+/dist/index-es.js
+/dist/index-cjs.cjs
 .tern-*
 
 *.iml
-*.mjs

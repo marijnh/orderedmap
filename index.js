@@ -1,6 +1,6 @@
 // ::- Persistent data structure representing an ordered mapping from
 // strings to values, with some convenient update methods.
-function OrderedMap(content) {
+export default function OrderedMap(content) {
   this.content = content
 }
 
@@ -125,5 +125,3 @@ OrderedMap.from = function(value) {
   if (value) for (var prop in value) content.push(prop, value[prop])
   return new OrderedMap(content)
 }
-
-module.exports = OrderedMap

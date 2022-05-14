@@ -2,12 +2,16 @@
   "name": "orderedmap",
   "version": "1.1.6",
   "description": "Persistent ordered mapping from strings",
-  "main": "index.js",
-  "module": "index.es.js",
-  "types": "types/index.d.ts",
+  "type": "module",
+  "main": "dist/index-cjs.cjs",
+  "module": "dist/index-es.js",
+  "exports": {
+    "import": "./dist/index-es.js",
+    "require": "./dist/index-cjs.cjs"
+  },
+  "sideEffects": false,
   "files": [
-    "types",
-    "index.es.js"
+    "dist/*"
   ],
   "repository": {
     "type": "git",
@@ -29,7 +33,6 @@
     "prepare": "npm run build"
   },
   "devDependencies": {
-    "rollup": "^1.26.3",
-    "rollup-plugin-commonjs": "^10.1.0"
+    "rollup": "^1.26.3"
   }
 }

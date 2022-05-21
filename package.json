@@ -4,6 +4,7 @@
   "description": "Persistent ordered mapping from strings",
   "type": "module",
   "main": "dist/index-cjs.cjs",
+  "types": "dist/index-cjs.d.ts",
   "module": "dist/index-es.js",
   "exports": {
     "import": "./dist/index-es.js",

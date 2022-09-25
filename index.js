@@ -108,6 +108,14 @@ OrderedMap.prototype = {
     return result
   },
 
+  // :: () → Object
+  // Turn ordered map into a plain object.
+  toObject: function() {
+    var result = {}
+    this.forEach(function(key, value) { result[key] = value })
+    return result
+  },
+
   // :: number
   // The amount of keys in this map.
   get size() {

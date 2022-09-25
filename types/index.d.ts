@@ -21,6 +21,8 @@ declare class OrderedMap<T = any> {
 
   subtract(map: MapLike<T>): OrderedMap<T>
 
+  toObject<T extends Record<string, any> = Record<string, any>>(): T;
+
   readonly size: number
 
   static from<T>(map: MapLike<T>): OrderedMap<T>

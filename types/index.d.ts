@@ -28,6 +28,6 @@ declare class OrderedMap<T = any> {
   static from<T>(map: MapLike<T>): OrderedMap<T>
 }
 
-type MapLike<T = any> = Record<string, T> | OrderedMap<T>
+export type MapLike<T = any> = Record<string, T> | OrderedMap<T>
 
 export default OrderedMap

@@ -12,7 +12,8 @@
   },
   "sideEffects": false,
   "files": [
-    "dist/*"
+    "dist/*",
+    "types/*"
   ],
   "repository": {
     "type": "git",

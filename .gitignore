@@ -2,5 +2,4 @@
 /dist/index.js
 /dist/index.cjs
 .tern-*
-
 *.iml

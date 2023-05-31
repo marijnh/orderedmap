@@ -122,7 +122,7 @@ OrderedMap.prototype = {
     return this.content.length >> 1
   },
 
-  // :: System.iterator() → [...[key, value]]
+  // :: [System.iterator]() → [...[key, value]]
   // provides a standard Symbol.iterator for-loop factory iterator over the content of the OrderedMap
   // to allow iterator over it with a for (const item of items) {}.
   [Symbol.iterator]() {

@@ -3,3 +3,5 @@
 /dist/index.cjs
 .tern-*
 *.iml
+.idea
+package-lock.json

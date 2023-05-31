@@ -120,6 +120,26 @@ OrderedMap.prototype = {
   // The amount of keys in this map.
   get size() {
     return this.content.length >> 1
+  },
+
+  // :: System.iterator() → [...[key, value]]
+  // provides a standard Symbol.iterator for-loop factory iterator over the content of the OrderedMap
+  // to allow iterator over it with a for (const item of items) {}.
+  [Symbol.iterator]() {
+    let index = 0;
+    const content = [...this.content];
+    const maxLength = content.length - 1;
+    return {
+      next() {
+        if (index < maxLength) {
+          // read the next pair of key/value and advance the index as we go
+          const value = [content[index++], content[index++]];
+          return { value, done: false };
+        } else {
+          return { done: true };
+        }
+      }
+    }
   }
 }
 

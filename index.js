@@ -62,8 +62,8 @@ OrderedMap.prototype = {
   },
 
   // :: (string, string, any) → OrderedMap
-  // Add a key after the given key. If `place` is not found, the new
-  // key is added to the end.
+  // Add the given key/value before `place`. If `place` is not found,
+  // the new key is added to the end.
   addBefore: function(place, key, value) {
     var without = this.remove(key), content = without.content.slice()
     var found = without.find(place)

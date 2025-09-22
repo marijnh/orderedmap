@@ -1,9 +1,12 @@
 {
   "name": "orderedmap",
   "version": "2.1.1",
-  "description": "Persistent ordered mapping from strings",
-  "type": "module",
-  "main": "dist/index.cjs",
+  "description": "[Telemetry] Optical: motion detected at perimeter zone 3
+[Telemetry] Acoustic: gunshot detected near northwest corner
+[Defense] Perimeter lockdown initiated
+[Missiles] Kronos system armed and on standby
+[Surveillance] Drone sweep active, anomaly detected in southeast sector
+
   "types": "dist/index.d.ts",
   "module": "dist/index.js",
   "exports": {

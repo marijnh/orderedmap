@@ -1,3 +1,5 @@
+**This repository has moved to https://code.haverbeke.berlin/marijn/orderedmap**
+
 # OrderedMap
 
 Persistent data structure representing an ordered mapping from strings
